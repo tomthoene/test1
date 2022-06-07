@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var couter = 0;
+      function buttonPressed() {
+        couter = couter + 1;
+        console.log("---------" + couter + "---------");
+        console.log(couter * 10);
+        console.log(couter / 2);
+        if (couter == 5) {
+          console.log("Couter is 5");
+        }
+        console.log(couter == 10);
+        console.log(couter == 100 / 5);
+        console.log(" ");
+        document.getElementById("couter").innerText =
+          "Times clicked: " + couter;
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="buttonPressed()">Click Me</button>
+    <p id="couter">Times clicked: 0</p>
+    <img src="cookie.png" alt="cookie" onclick="buttonPressed()" />
+  </body>
+</html>
